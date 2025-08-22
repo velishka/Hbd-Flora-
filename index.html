@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>С Днём Рождения, Друг!</title>
+  <meta name="description" content="Небольшой сайт‑поздравление с фото и музыкой." />
+  <meta property="og:title" content="С Днём Рождения!" />
+  <meta property="og:description" content="Открой и жми на кнопку — начнётся праздник 🎉" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/photo1.jpg" />
+  <link rel="preload" href="assets/song.mp3" as="audio" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="confetti"></canvas>
+
+  <header class="hero">
+    <h1>С днём рождения, <span id="friendName">Дружище</span>! 🎂</h1>
+    <p class="subtitle">Желаю здоровья, побед и только классных моментов!</p>
+    <div class="cta">
+      <button id="startBtn" type="button">Запустить праздник 🎉</button>
+      <audio id="song" src="assets/song.mp3" preload="auto"></audio>
+    </div>
+  </header>
+
+  <main>
+    <section class="gallery">
+      <h2>Наши моменты</h2>
+      <div class="grid">
+        <a href="assets/images/photo1.jpg"><img src="assets/images/photo1.jpg" alt="Фото 1"></a>
+        <a href="assets/images/photo2.jpg"><img src="assets/images/photo2.jpg" alt="Фото 2"></a>
+        <a href="assets/images/photo3.jpg"><img src="assets/images/photo3.jpg" alt="Фото 3"></a>
+        <a href="assets/images/photo4.jpg"><img src="assets/images/photo4.jpg" alt="Фото 4"></a>
+        <a href="assets/images/photo5.jpg"><img src="assets/images/photo5.jpg" alt="Фото 5"></a>
+        <a href="assets/images/photo6.jpg"><img src="assets/images/photo6.jpg" alt="Фото 6"></a>
+      </div>
+      <p class="hint">Замени картинки в папке <code>assets/images</code> на свои (имена можно оставить те же).</p>
+    </section>
+
+    <section class="wish">
+      <h2>Пожелание</h2>
+      <p>Пусть каждый день приносит тебе радость, силы и вдохновение. Ты — топ! 🚀</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Сделано с любовью ❤️ · <a href="https://github.com" target="_blank" rel="noopener">GitHub Pages</a></p>
+  </footer>
+
+  <!-- Лайтбокс -->
+  <div id="lightbox" class="lightbox hidden">
+    <button class="close" aria-label="Закрыть">✕</button>
+    <img id="lightboxImg" alt="Фото">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
